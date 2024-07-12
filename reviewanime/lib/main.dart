@@ -3,6 +3,8 @@ import 'package:reviewanime/views/anime_details_view.dart';
 import 'package:reviewanime/views/home_view.dart';
 import 'package:reviewanime/views/profile_view.dart';
 import 'package:reviewanime/views/review_create_view.dart';
+import 'package:reviewanime/views/login_view.dart';  
+import 'package:reviewanime/views/register_view.dart';  
 
 void main() {
   runApp(MyApp());
@@ -17,9 +19,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepPurple,
         brightness: Brightness.dark,
       ),
-      initialRoute: '/', // Rota inicial
+      initialRoute: '/login', // Rota inicial ajustada para LoginView
       routes: {
-        '/': (context) => HomeView(),
+        '/login': (context) => LoginView(),
+        '/register': (context) => RegisterView(),
+        '/home': (context) => HomeView(),
         '/anime_details': (context) => AnimeDetailsView(),
         '/write_review': (context) => ReviewCreateView(),
         '/profile': (context) => ProfileView(),

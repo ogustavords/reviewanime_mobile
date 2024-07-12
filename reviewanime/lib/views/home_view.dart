@@ -8,6 +8,14 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Recommended Animes'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.logout),
+            onPressed: () {
+              Navigator.pushNamed(context, '/login');
+            },
+          ),
+        ],
       ),
       drawer: Drawer(
         child: ListView(
